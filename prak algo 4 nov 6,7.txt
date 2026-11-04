@@ -1,0 +1,140 @@
+
+# def konversi_nilai(huruf="A"):
+#     nilai = {
+#         "A": 4.00,
+#         "A-": 3.75,
+#         "B+": 3.50,
+#         "B": 3.00,
+#         "B-": 2.75,
+#         "C+": 2.50,
+#         "C": 2.00,
+#         "C-": 1.75,
+#         "D": 1.50,
+#         "E": 1.25
+#     }
+
+#     return nilai.get(huruf.upper(), 0)
+
+
+# total = 0
+# jumlah = 0
+
+# while True:
+#     huruf = input("Masukkan nilai: ").upper()
+
+#     if huruf == "":
+#         break
+
+#     angka = konversi_nilai(huruf)
+
+#     if angka == 0:
+#         print("Nilai tidak valid")
+#     else:
+#         print("Nilai =", angka)
+#         total += angka
+#         jumlah += 1
+
+# if jumlah > 0:
+#     rata = total / jumlah
+#     print("Rata-ratanya adalah:", rata)
+# else:
+#     print("Belum ada nilai yang dimasukkan")
+
+
+
+# def tahun_kabisat(tahun):
+#     if tahun % 400 == 0:
+#         return True
+#     elif tahun % 100 == 0:
+#         return False
+#     elif tahun % 4 == 0:
+#         return True
+#     else:
+#         return False
+
+
+# def jumlah_hari(bulan, tahun):
+#     if bulan == 2:
+#         if tahun_kabisat(tahun):
+#             return 29
+#         else:
+#             return 28
+
+#     elif bulan == 4 or bulan == 6 or bulan == 9 or bulan == 11:
+#         return 30
+
+#     else:
+#         return 31
+
+
+# print("Program Menghitung Jumlah Hari")
+# print("Masukkan 0 untuk menghentikan program")
+
+# while True:
+#     bulan = int(input("Masukkan bulan (1-12): "))
+
+#     if bulan == 0:
+#         print("Terima kasih sudah menggunakan program saya")
+#         break
+
+#     if bulan < 1 or bulan > 12:
+#         print("Bulan tidak valid")
+#         continue
+
+#     tahun = int(input("Masukkan tahun: "))
+
+#     hasil = jumlah_hari(bulan, tahun)
+
+#     print(hasil, "hari dalam sebulan")
+
+
+
+# def cek_prima(angka):
+#     if angka <= 1:
+#         return False
+
+#     for i in range(2, angka):
+#         if angka % i == 0:
+#             return False
+
+#     return True
+
+
+# def tampilkan_hasil(angka):
+#     if cek_prima(angka):
+#         print(angka, "adalah bilangan Prima")
+#     else:
+#         print(angka, "bukanlah bilangan Prima")
+
+
+# angka = int(input("Masukkan angka: "))
+# tampilkan_hasil(angka)
+
+
+
+# def ordinal(angka):
+#     if angka % 100 == 11 or angka % 100 == 12 or angka % 100 == 13:
+#         akhiran = "th"
+#     elif angka % 10 == 1:
+#         akhiran = "st"
+#     elif angka % 10 == 2:
+#         akhiran = "nd"
+#     elif angka % 10 == 3:
+#         akhiran = "rd"
+#     else:
+#         akhiran = "th"
+
+#     return str(angka) + akhiran
+
+
+# print("Ordinal Number")
+# print("Ketik 0 untuk menghentikan program")
+
+# while True:
+#     angka = int(input("Masukkan angka: "))
+
+#     if angka == 0:
+#         print("Terima kasih telah menggunakan program saya")
+#         break
+
+#     print(ordinal(angka))
